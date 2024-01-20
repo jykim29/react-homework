@@ -4,6 +4,7 @@ import PostList from "./components/Board/PostList";
 import AddressBar from "./components/Header/AddressBar";
 import CategoryBar from "./components/Header/CategoryBar";
 import NavigationBar from "./components/Footer/NavigationBar";
+import WriteButton from "./components/Board/WriteButton";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <header className="w-full">
         <AddressBar />
         <CategoryBar />
+        <WriteButton />
       </header>
 
       <main className="relative overflow-x-hidden overflow-y-auto flex-1">
