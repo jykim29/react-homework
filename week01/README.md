@@ -4,6 +4,7 @@
 
 - [과제 목표](#🎯-과제-목표)
 - [수행 과정](#🎞-수행-과정)
+- [회고](#🤔-회고)
 
 ### 🎯 과제 목표
 
@@ -444,6 +445,7 @@ const rootElement = createRoot(document.querySelector("#root"));
 rootElement.render(App());
 ```
 
-#### 3. 회고
+### 🤔 회고
 
 - 처음 계획은 React API의 `createElement` 를 사용하여 마크업하려고 시도해보았지만, 컴포넌트 코드의 중첩이 심하고 또 tailwindcss를 사용하기에 className이 너무 길어서 JSX Syntax를 사용하는 것으로 방향을 바꿨습니다.
+- 여러가지 정보들을 공식 문서를 통해 찾아보던 도중 vite 공식 플러그인 `@vitejs-plugin-react` 을 설치하게 되었는데 새로고침 방지 기능과 jsx파일에 React 모듈을 import하지 않아도 되는 기능이 앞으로 도움이 될 것 같았습니다...😅
