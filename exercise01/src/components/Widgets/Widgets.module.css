@@ -1,0 +1,65 @@
+.box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 192px;
+  height: 72px;
+  padding-inline: 16px 8px;
+  padding-block: 16px;
+  border: 1px solid #ebebea;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px 0px #b5b5b526;
+  background: linear-gradient(99deg, #fff 29.16%, #f4f4f4 93.35%);
+}
+
+.temperature {
+  display: block;
+  color: #040404;
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+}
+
+.dust {
+  display: block;
+  color: #01a9ff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+}
+
+.stock {
+  display: block;
+  color: #040404;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+}
+.percentage {
+  color: #4284f7;
+}
+
+.description {
+  display: block;
+  color: #6d7478;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.12px;
+}
+
+.left {
+  width: 110px;
+}
+
+.right {
+  flex: 1;
+}
+
+.img {
+  height: 100%;
+}

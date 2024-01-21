@@ -1,0 +1,11 @@
+.container {
+  max-width: 568px;
+  min-width: 280px;
+  margin: 0 auto;
+  height: 100dvh;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 1rem;
+}

@@ -1,0 +1,44 @@
+.form {
+  --color: #03cc5c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 0.75rem;
+  width: 100%;
+  padding-inline: 20px 12px;
+  padding-block: 12px;
+  border: 1px solid var(--color, #03cc5c);
+  background: white;
+  border-radius: 50px;
+  outline: none;
+}
+
+.form > * {
+  flex-shrink: 0;
+}
+
+.form:has(.input:focus) {
+  box-shadow: 0px 4px 4px 0px #44833f26;
+}
+
+.input {
+  --color: #63676a;
+  flex: 1;
+  color: var(--color, #63676a);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  border: none;
+  outline: none;
+}
+.input::placeholder {
+  --color: #bcc3c7;
+  color: var(--color, #bcc3c7);
+}
+
+.submit {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
