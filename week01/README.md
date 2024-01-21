@@ -86,7 +86,7 @@ export default {
 <html lang="ko">
   <head>
     <!-- 생략 -->
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/main.jsx"></script>
     <title>React 1주차 과제</title>
   </head>
   <body>
@@ -436,13 +436,13 @@ export default App;
 ##### 마지막으로 root에 렌더링
 
 ```js
-// main.js
+// main.jsx
 import { createRoot } from "react-dom/client";
 import App from "./src/App";
 import "./index.css";
 
 const rootElement = createRoot(document.querySelector("#root"));
-rootElement.render(App());
+rootElement.render(<App />);
 ```
 
 ### 🤔 회고
