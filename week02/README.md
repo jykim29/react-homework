@@ -21,6 +21,9 @@
 
   ```json
   {
+    "name": "articleData.json",
+    "version": "0.0.1",
+    "author": "abcde@gmail.com",
     "page": 1,
     "perPage": 500,
     "totalItems": -1,
