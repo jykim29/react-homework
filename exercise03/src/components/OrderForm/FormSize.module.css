@@ -1,0 +1,48 @@
+.size {
+  display: flex;
+  gap: 10px;
+
+  & input[type='radio'] {
+    block-size: 0;
+    inline-size: 0;
+  }
+
+  & label {
+    display: inline-block;
+    inline-size: 300px;
+    block-size: 120px;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+
+    & b {
+      padding: 10px 20px;
+      display: block;
+      inline-size: 100%;
+      block-size: 50%;
+      background-color: #dddddd;
+      font-weight: 900;
+    }
+    & span {
+      display: block;
+      inline-size: 100%;
+      block-size: 50%;
+      padding: 10px 20px;
+      color: black;
+    }
+  }
+
+  & input:checked + label {
+    background-color: #da1a32;
+
+    & b {
+      background-color: #b40e29;
+    }
+    & span {
+      color: white;
+    }
+  }
+}

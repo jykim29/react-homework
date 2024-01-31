@@ -1,0 +1,12 @@
+.FormInput {
+  & input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    inline-size: 400px;
+  }
+  & input:focus {
+    border-color: dodgerblue;
+  }
+}

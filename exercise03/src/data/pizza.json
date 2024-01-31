@@ -1,0 +1,149 @@
+{
+  "name": "pizza.json",
+  "version": "0.0.1",
+  "author": "jykim",
+  "items": [
+    {
+      "id": "premium-super-supreme",
+      "information": {
+        "pizzaName": "수퍼슈프림",
+        "description": "오랫동안 사랑받아온 프리미엄 콤비네이션 피자",
+        "pizzaImageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/menu/RPPZ0008_RPEG0003_RPDO0005_l.png"
+      },
+      "options": {
+        "size": [
+          {
+            "id": "size-large",
+            "name": "L",
+            "price": "33900"
+          },
+          {
+            "id": "size-medium",
+            "name": "M",
+            "price": "28500"
+          }
+        ],
+        "dough": [
+          {
+            "id": "dough-special-edge",
+            "name": "스페셜 엣지 도우 라지",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/dou/RPDO0005_ps.png"
+          },
+          {
+            "id": "dough-original",
+            "name": "오리지널 도우 라지",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/dou/RPDO0006_ps.png"
+          }
+        ],
+        "edge": [
+          {
+            "id": "edge-rich-gold",
+            "name": "리치골드 라지",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/edge/RPEG0003_ps.png",
+            "price": "5000"
+          },
+          {
+            "id": "edge-cheese-crust",
+            "name": "치즈크러스트 라지",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/edge/RPEG0002_ps.png",
+            "price": "4000"
+          },
+          {
+            "id": "edge-double-cheese-crust",
+            "name": "더블 치즈크러스트 라지",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/edge/RPEG0039_ps.png",
+            "price": "6000"
+          }
+        ],
+        "topping": [
+          {
+            "id": "topping-mozzarella-cheese",
+            "name": "모짜렐라 치즈",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/topping/RPTP0037_ps.png",
+            "price": "2000"
+          },
+          {
+            "id": "topping-cheddar-cheese",
+            "name": "체다 치즈",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/topping/RPTP0038_ps.png",
+            "price": "1000"
+          },
+          {
+            "id": "topping-pineapple",
+            "name": "파인애플",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/topping/RPTP0036_ps.png",
+            "price": "1000"
+          },
+          {
+            "id": "topping-pepperoni",
+            "name": "페페로니",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/topping/RPTP0023_ps.png",
+            "price": "1000"
+          },
+          {
+            "id": "topping-casune-shrimp",
+            "name": "케이준 새우",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/topping/RPTP0022_ps.png",
+            "price": "3000"
+          },
+          {
+            "id": "topping-black-olive",
+            "name": "블랙 올리브",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/topping/RPTP0029_ps.png",
+            "price": "1000"
+          },
+          {
+            "id": "topping-Jalapeno",
+            "name": "할라피뇨",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/topping/RPTP1443_ps.png",
+            "price": "2000"
+          },
+          {
+            "id": "topping-bacon",
+            "name": "베이컨",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/topping/RPTP0021_ps.png",
+            "price": "1500"
+          },
+          {
+            "id": "topping-sausage",
+            "name": "소시지",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/topping/RPTP1440_ps.png",
+            "price": "2000"
+          },
+          {
+            "id": "topping-bulgogi",
+            "name": "불고기",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/topping/RPTP0024_ps.png",
+            "price": "2500"
+          },
+          {
+            "id": "topping-mushroom",
+            "name": "양송이",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/topping/RPTP0031_ps.png",
+            "price": "1000"
+          },
+          {
+            "id": "topping-sweet-corn",
+            "name": "스위트콘",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/topping/RPTP0035_ps.png",
+            "price": "1000"
+          }
+        ],
+        "beverage": [
+          {
+            "id": "beverage-cola",
+            "name": "코카콜라 1.25L",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/menu/RPBE1257_s.png",
+            "price": "2300"
+          },
+          {
+            "id": "beverage-sprite",
+            "name": "스프라이트 1.25L",
+            "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/menu/RPBE1262_s.png",
+            "price": "2400"
+          }
+        ]
+      }
+    }
+  ]
+}

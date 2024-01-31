@@ -1,0 +1,48 @@
+.FormRadio {
+  & input[type='radio'] {
+    block-size: 0;
+    inline-size: 0;
+  }
+
+  & label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-inline-start: 40px;
+    cursor: pointer;
+
+    & figure {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      & img {
+        inline-size: 120px;
+        aspect-ratio: 1/1;
+      }
+      & figcaption {
+        font-size: 1.3rem;
+      }
+    }
+    & > span {
+      margin-inline-start: auto;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  }
+  & label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    translate: 0% -50%;
+    inline-size: 8px;
+    block-size: 8px;
+    border: 7px solid #dddddd;
+    border-radius: 50%;
+    box-sizing: content-box;
+  }
+  & input:checked + label::before {
+    border-color: #b40e29;
+  }
+}

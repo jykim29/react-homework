@@ -1,0 +1,25 @@
+.container {
+  padding-block-end: 70px;
+}
+
+.form {
+  padding: 20px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+
+  & fieldset {
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    & legend {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+input:focus + label {
+  box-shadow: 0px 0px 20px 4px dodgerblue;
+}

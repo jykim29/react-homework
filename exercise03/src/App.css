@@ -1,0 +1,24 @@
+@import url('https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css');
+@import url(./styles/reset.css);
+
+body {
+  font-family: 'SUIT Variable', sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

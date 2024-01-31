@@ -1,0 +1,62 @@
+.FormCheckBox {
+  block-size: 400px;
+  overflow-y: auto;
+
+  & input[type='checkbox'] {
+    block-size: 0;
+    inline-size: 0;
+  }
+
+  & > span {
+    font-size: 0.8rem;
+    color: #5a5a5a;
+  }
+
+  & label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    & > span {
+      margin-inline-start: auto;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    & figure {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding-inline-start: 40px;
+
+      & img {
+        inline-size: 120px;
+        aspect-ratio: 1/1;
+      }
+
+      & figcaption {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  & label::before {
+    content: '✔';
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 10px;
+    color: white;
+    translate: 0% -50%;
+    inline-size: 22px;
+    block-size: 22px;
+    background-color: #dddddd;
+    border-radius: 50%;
+  }
+  & input:checked + label::before {
+    background-color: #b40e29;
+  }
+}
