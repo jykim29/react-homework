@@ -222,14 +222,21 @@
     {pizzaData.items.map((pizza) => {
       return (
         <div key={pizza.id}>
-          <PizzaInfo />
-          <OrderForm />
+          <PizzaInfo data={pizza.information} />
+          <OrderForm
+            currentOption={order.toppingAndBeverages}
+            onChangeOption={handleChangeOption}
+            onToggleOption={handleToggleOption}
+            onChangeMessage={handleChangeMessage}
+            data={pizza.options}
+            deliveryMessage={order.deliveryMessage}
+          />
         </div>
       );
     })}
   </main>
 
-  <OrderResult />
+  <OrderResult result={order} onSubmit={handleSubmit} />
 </>
 ```
 
