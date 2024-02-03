@@ -12,13 +12,6 @@ export default function OrderForm({
   onChangeOption,
   onToggleOption,
 }) {
-  const handleToggleOption = (option, e) => {
-    if (currentOption.length > 2 && e.target.checked) {
-      return alert('옵션은 3개까지만 선택 가능합니다.');
-    }
-    onToggleOption(option, e);
-  };
-
   return (
     <section className={classes.container}>
       <h2 className="sr-only">피자 주문 양식</h2>
@@ -28,16 +21,19 @@ export default function OrderForm({
         <FormRadio data={edge} onChange={onChangeOption} name="edge" />
         <FormCheckBox
           data={topping}
-          onChange={handleToggleOption}
+          currentOption={currentOption}
+          onChange={onToggleOption}
           name="topping"
         />
         <FormCheckBox
           data={beverage}
-          onChange={handleToggleOption}
+          currentOption={currentOption}
+          onChange={onToggleOption}
           name="beverages"
         />
         <FormTextInput
           name="deliveryMessage"
+          currentOption={currentOption}
           onChange={onChangeMessage}
           message={deliveryMessage}
         />

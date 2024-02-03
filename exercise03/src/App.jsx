@@ -4,6 +4,7 @@ import OrderForm from './components/OrderForm/OrderForm';
 import OrderResult from './components/OrderResult/OrderResult';
 import PizzaInfo from './components/PizzaInfo/PizzaInfo';
 import pizzaData from './data/pizza.json';
+import { translateOptionName } from './utils/translateOptionName';
 
 const INITIAL_ORDER_FORM = {
   size: {
@@ -33,37 +34,41 @@ function App() {
     );
   };
   const handleChangeOption = (optionName, { target: { name, value } }) => {
-    setOrder((prev) => {
-      let nextValue = { ...prev, [name]: { optionName, price: value } };
-      const totalPrice = caculateTotalPrice(nextValue);
-      return { ...nextValue, totalPrice };
-    });
+    const nextOrder = { ...order, [name]: { optionName, price: value } };
+    setOrder({ ...nextOrder, totalPrice: caculateTotalPrice(nextOrder) });
   };
-  const handleToggleOption = (
-    { id: optionId, name: optionName },
-    { target: { value, checked } }
-  ) => {
-    setOrder((prev) => {
-      const isExist =
-        prev.toppingAndBeverages.findIndex((item) => item.id === optionId) >= 0;
-      if (isExist && !checked) {
-        const newValue = prev.toppingAndBeverages.filter(
-          (item) => item.id !== optionId
-        );
-        const nextValue = { ...prev, toppingAndBeverages: newValue };
-        const totalPrice = caculateTotalPrice(nextValue);
-        return { ...nextValue, totalPrice };
-      }
-      const nextValue = {
-        ...prev,
+  const checkMaxCount = (targetName) => {
+    const selectCount = order.toppingAndBeverages.filter(
+      (option) => option.category === targetName
+    ).length;
+    if (targetName === 'topping') return selectCount > 2;
+    if (targetName === 'beverages') return selectCount > 0;
+    return false;
+  };
+  const handleToggleOption = (option, category, e) => {
+    const { checked, name, value } = e.target;
+    if (checked && checkMaxCount(name))
+      return alert(
+        `${translateOptionName(name)}의 최대 추가 가능한 갯수를 초과했습니다.`
+      );
+
+    const { name: optionName } = option;
+    if (checked) {
+      const nextOrder = {
+        ...order,
         toppingAndBeverages: [
-          ...prev.toppingAndBeverages,
-          { id: optionId, optionName, price: value },
+          ...order.toppingAndBeverages,
+          { optionName, category, price: value },
         ],
       };
-      const totalPrice = caculateTotalPrice(nextValue);
-      return { ...nextValue, totalPrice };
-    });
+      setOrder({ ...nextOrder, totalPrice: caculateTotalPrice(nextOrder) });
+    } else {
+      const nextOption = [...order.toppingAndBeverages].filter(
+        (option) => option.optionName !== optionName
+      );
+      const nextOrder = { ...order, toppingAndBeverages: nextOption };
+      setOrder({ ...nextOrder, totalPrice: caculateTotalPrice(nextOrder) });
+    }
   };
   const handleChangeMessage = ({ target: { value } }) => {
     setOrder((prev) => ({ ...prev, deliveryMessage: value }));

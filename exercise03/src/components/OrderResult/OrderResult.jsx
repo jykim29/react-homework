@@ -14,7 +14,24 @@ export default function OrderResult({
         <div>
           <b>토핑</b>
           <span>
-            {toppingAndBeverages.map((item) => item.optionName).join(', ')}
+            {toppingAndBeverages
+              .reduce((acc, cur) => {
+                if (cur.category === 'topping') return [...acc, cur.optionName];
+                return acc;
+              }, [])
+              .join(', ')}
+          </span>
+        </div>
+        <div>
+          <b>음료</b>
+          <span>
+            {toppingAndBeverages
+              .reduce((acc, cur) => {
+                if (cur.category === 'beverages')
+                  return [...acc, cur.optionName];
+                return acc;
+              }, [])
+              .join(', ')}
           </span>
         </div>
         <div>

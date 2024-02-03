@@ -6,7 +6,7 @@ export const translateOptionName = (name) => {
       return '엣지';
     case 'topping':
       return '토핑';
-    case 'beverage':
+    case 'beverages':
       return '음료';
     default:
       return '옵션';

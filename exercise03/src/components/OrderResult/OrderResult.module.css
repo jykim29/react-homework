@@ -3,7 +3,7 @@
   bottom: 0;
   inline-size: 95%;
   margin-inline: 20px;
-  block-size: 75px;
+  block-size: 90px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   box-shadow: 0px -2px 10px 4px #ccc;
@@ -45,6 +45,10 @@
         color: white;
         border: none;
         cursor: pointer;
+
+        &:hover {
+          background-color: #f12840;
+        }
 
         & span {
           font-size: 0.8rem;
